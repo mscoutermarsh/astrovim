@@ -34,6 +34,7 @@ return {
   { "zbirenbaum/copilot.lua", lazy = false },
   { "blarghmatey/split-expander", lazy = false },
   { "tpope/vim-rails", lazy = false },
+  { "RRethy/nvim-treesitter-endwise" },
   { "tpope/vim-fugitive", lazy = false },
   { "icymind/NeoSolarized", lazy = false },
   { "janko-m/vim-test", lazy = false },
@@ -55,6 +56,7 @@ return {
       local npairs = require "nvim-autopairs"
       local Rule = require "nvim-autopairs.rule"
       local cond = require "nvim-autopairs.conds"
+      npairs.add_rules(require('nvim-autopairs.rules.endwise-ruby'))
       npairs.add_rules(
         {
           Rule("$", "$", { "tex", "latex" })
