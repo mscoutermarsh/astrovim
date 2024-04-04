@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
 
@@ -23,17 +21,7 @@ return {
     opts = function(_, opts)
       -- customize the dashboard header
       opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
+        "",
       }
       return opts
     end,
@@ -41,17 +29,23 @@ return {
 
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
-
-  -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
-  {
-    "L3MON4D3/LuaSnip",
-    config = function(plugin, opts)
-      require "astronvim.plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
-      -- add more custom luasnip configuration such as filetype extend or custom snippets
-      local luasnip = require "luasnip"
-      luasnip.filetype_extend("javascript", { "javascriptreact" })
-    end,
-  },
+  { "blarghmatey/split-expander", lazy = false },
+  { "christoomey/vim-tmux-navigator", lazy = false },
+  { "zbirenbaum/copilot.lua", lazy = false },
+  { "blarghmatey/split-expander", lazy = false },
+  { "tpope/vim-rails", lazy = false },
+  { "tpope/vim-fugitive", lazy = false },
+  { "icymind/NeoSolarized", lazy = false },
+  { "janko-m/vim-test", lazy = false },
+  { "ntpeters/vim-better-whitespace"},
+  { "benmills/vimux", lazy = false },
+  { "RRethy/nvim-treesitter-endwise", lazy = false },
+  { "roman/golden-ratio", lazy = false },
+  { "tmhedberg/matchit" },
+  { "fatih/vim-go" },
+  { "nvim-treesitter/nvim-treesitter-textobjects" },
+  { "vim-ruby/vim-ruby" },
+  { "tpope/vim-rhubarb", lazy = false },
 
   {
     "windwp/nvim-autopairs",
