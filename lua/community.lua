@@ -5,6 +5,6 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.colorscheme.neosolarized-nvim" },
+  { import = "astrocommunity.colorscheme.nightfox-nvim" },
   -- import/override with your plugins folder
 }
